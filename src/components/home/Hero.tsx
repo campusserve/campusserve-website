@@ -15,26 +15,27 @@ export default function Hero() {
   return (
     <section
       id="home"
-      className="bg-gradient-to-b from-white via-yellow-50/40 to-white"
+      className="relative overflow-hidden bg-gradient-to-br from-white via-yellow-50/30 to-white"
     >
-      <Container className="py-16 lg:py-20">
-        <div className="grid items-center gap-16 lg:grid-cols-2">
+      <Container className="py-12 lg:py-20">
 
-          <div>
+        <div className="grid items-center gap-10 xl:grid-cols-[58%_42%]">
+
+          <div className="max-w-2xl">
 
             <SectionBadge>
               {hero.badge}
             </SectionBadge>
 
-            <h1 className="mt-8 max-w-2xl text-5xl font-black leading-[1.02] tracking-tight text-gray-900 lg:text-7xl">
+            <h1 className="mt-8 text-5xl font-black leading-[0.95] tracking-tight text-gray-900 lg:text-6xl xl:text-7xl">
               {hero.title}
 
-              <span className="mt-2 block text-yellow-500">
+              <span className="mt-3 block whitespace-pre-line text-yellow-500">
                 {hero.highlight}
               </span>
             </h1>
 
-            <p className="mt-8 max-w-lg text-lg leading-8 text-gray-600">
+            <p className="mt-8 text-xl leading-9 text-gray-600">
               {hero.description}
             </p>
 
@@ -47,7 +48,7 @@ export default function Hero() {
               <Button
                 variant="outline"
                 size="lg"
-                className="h-14 rounded-2xl px-8"
+                className="h-14 rounded-2xl px-8 text-lg"
               >
                 <Store className="mr-2 h-5 w-5" />
                 {hero.secondaryButton}
@@ -55,15 +56,18 @@ export default function Hero() {
 
             </div>
 
-            <TrustBar />
+            <div className="mt-10">
+              <TrustBar />
+            </div>
 
           </div>
 
-          <div className="flex items-center justify-center">
+          <div className="flex justify-center xl:justify-end">
             <PhoneMockup />
           </div>
 
         </div>
+
       </Container>
     </section>
   );

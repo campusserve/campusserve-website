@@ -1,5 +1,3 @@
-import { ReactNode } from "react";
-
 interface SectionHeadingProps {
   badge?: string;
   title: string;
@@ -15,29 +13,33 @@ export default function SectionHeading({
   description,
   align = "center",
 }: SectionHeadingProps) {
-  const alignment =
-    align === "center" ? "mx-auto text-center" : "text-left";
-
   return (
-    <div className={`max-w-3xl ${alignment}`}>
+    <div
+      className={`mx-auto max-w-4xl ${
+        align === "center" ? "text-center" : "text-left"
+      }`}
+    >
       {badge && (
-        <span className="inline-flex rounded-full bg-yellow-100 px-4 py-2 text-sm font-semibold text-yellow-700">
+        <span className="inline-flex items-center rounded-full border border-yellow-200 bg-yellow-100 px-5 py-2 text-sm font-semibold text-yellow-700">
           {badge}
         </span>
       )}
 
-      <h2 className="mt-6 text-4xl font-black tracking-tight text-gray-900 lg:text-5xl">
+      <h2 className="mt-8 text-4xl font-black leading-tight tracking-tight text-gray-900 md:text-5xl lg:text-6xl">
         {title}
 
         {highlight && (
-          <span className="block text-yellow-500">
-            {highlight}
-          </span>
+          <>
+            <br />
+            <span className="text-yellow-500">
+              {highlight}
+            </span>
+          </>
         )}
       </h2>
 
       {description && (
-        <p className="mt-6 text-lg leading-8 text-gray-600">
+        <p className="mx-auto mt-8 max-w-3xl text-xl leading-9 text-gray-600">
           {description}
         </p>
       )}

@@ -1,36 +1,47 @@
-import { ShieldCheck, Store, Smartphone } from "lucide-react";
+import {
+  ShieldCheck,
+  Store,
+  Smartphone,
+} from "lucide-react";
+
+const items = [
+  {
+    icon: ShieldCheck,
+    title: "Trusted Vendors",
+  },
+  {
+    icon: Smartphone,
+    title: "Mobile App",
+  },
+  {
+    icon: Store,
+    title: "Campus Marketplace",
+  },
+];
 
 export default function TrustBar() {
-  const items = [
-    {
-      icon: ShieldCheck,
-      text: "Trusted Campus Vendors",
-    },
-    {
-      icon: Store,
-      text: "Vendor Registration Open",
-    },
-    {
-      icon: Smartphone,
-      text: "Mobile App Coming Soon",
-    },
-  ];
-
   return (
-    <div className="mt-10 flex flex-wrap gap-6">
+    <div className="flex flex-wrap gap-6 pt-2">
+
       {items.map((item) => {
         const Icon = item.icon;
 
         return (
           <div
-            key={item.text}
-            className="flex items-center gap-2 text-sm font-medium text-gray-600"
+            key={item.title}
+            className="flex items-center gap-3"
           >
-            <Icon className="h-5 w-5 text-yellow-500" />
-            <span>{item.text}</span>
+            <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-yellow-100">
+              <Icon className="h-5 w-5 text-yellow-700" />
+            </div>
+
+            <span className="text-sm font-semibold text-gray-700">
+              {item.title}
+            </span>
           </div>
         );
       })}
+
     </div>
   );
 }

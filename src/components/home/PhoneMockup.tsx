@@ -1,14 +1,16 @@
 import {
-  Search,
-  UtensilsCrossed,
-  ShoppingBag,
-  Package,
-  House,
+  Bell,
+  ChevronRight,
   GraduationCap,
-  Briefcase,
+  House,
+  Package,
+  Search,
+  ShoppingBag,
+  UtensilsCrossed,
+  Wallet,
 } from "lucide-react";
 
-const quickActions = [
+const actions = [
   {
     title: "Food",
     icon: UtensilsCrossed,
@@ -20,77 +22,89 @@ const quickActions = [
     color: "bg-blue-100 text-blue-600",
   },
   {
-    title: "Delivery",
-    icon: Package,
-    color: "bg-green-100 text-green-600",
-  },
-  {
-    title: "Hostels",
+    title: "Hostel",
     icon: House,
     color: "bg-purple-100 text-purple-600",
   },
   {
-    title: "Services",
-    icon: GraduationCap,
-    color: "bg-yellow-100 text-yellow-700",
-  },
-  {
-    title: "Jobs",
-    icon: Briefcase,
-    color: "bg-pink-100 text-pink-600",
+    title: "Delivery",
+    icon: Package,
+    color: "bg-green-100 text-green-600",
   },
 ];
 
 export default function PhoneMockup() {
   return (
-    <div className="relative flex justify-center">
+    <div className="relative flex justify-center xl:justify-end">
 
-      {/* Background Glow */}
-      <div className="absolute -inset-6 rounded-[3rem] bg-yellow-300/20 blur-3xl" />
+      <div className="absolute -inset-14 rounded-full bg-yellow-300/30 blur-3xl" />
 
-      {/* Phone */}
-      <div className="relative w-[320px] overflow-hidden rounded-[42px] border border-gray-200 bg-white shadow-xl">
+      <div className="relative w-[360px] overflow-hidden rounded-[44px] border border-gray-200 bg-white shadow-[0_40px_80px_rgba(0,0,0,0.12)]">
 
-        {/* Speaker */}
-        <div className="mx-auto mt-4 h-2 w-24 rounded-full bg-gray-300" />
+        <div className="flex justify-center pt-4">
+          <div className="h-2 w-28 rounded-full bg-gray-300" />
+        </div>
 
-        <div className="p-6">
+        <div className="space-y-6 p-6">
 
-          {/* Greeting */}
-          <p className="text-sm text-gray-500">
-            Welcome back 👋
-          </p>
+          <div className="flex items-center justify-between">
 
-          <h3 className="mt-1 text-3xl font-bold text-gray-900">
-            Paul
-          </h3>
+            <div>
+              <p className="text-sm text-gray-500">
+                Good Morning 👋
+              </p>
 
-          {/* Search */}
-          <div className="mt-6 flex items-center rounded-xl bg-gray-100 px-4 py-3">
+              <h2 className="mt-1 text-3xl font-black text-gray-900">
+                Paul
+              </h2>
+            </div>
+
+            <Bell className="h-6 w-6 text-gray-400" />
+
+          </div>
+
+          <div className="rounded-3xl bg-gradient-to-r from-yellow-400 to-amber-400 p-5 text-black">
+
+            <p className="text-sm opacity-80">
+              Campus Wallet
+            </p>
+
+            <div className="mt-2 flex items-center justify-between">
+
+              <h3 className="text-3xl font-black">
+                ₦25,400
+              </h3>
+
+              <Wallet className="h-9 w-9" />
+
+            </div>
+
+          </div>
+
+          <div className="flex items-center rounded-2xl bg-gray-100 px-4 py-3">
 
             <Search className="h-5 w-5 text-gray-400" />
 
-            <span className="ml-3 text-sm text-gray-500">
-              Search services...
+            <span className="ml-3 text-gray-500">
+              Search...
             </span>
 
           </div>
 
-          {/* Quick Actions */}
-          <div className="mt-8 grid grid-cols-3 gap-4">
+          <div className="grid grid-cols-2 gap-4">
 
-            {quickActions.map((item) => (
+            {actions.map((item) => (
               <div
                 key={item.title}
-                className="rounded-xl bg-gray-50 p-4 text-center transition-all duration-300 hover:-translate-y-1 hover:shadow-md"
+                className="rounded-2xl bg-gray-50 p-5 transition hover:-translate-y-1 hover:shadow-lg"
               >
                 <div
-                  className={`mx-auto flex h-12 w-12 items-center justify-center rounded-xl ${item.color}`}
+                  className={`flex h-14 w-14 items-center justify-center rounded-2xl ${item.color}`}
                 >
-                  <item.icon className="h-6 w-6" />
+                  <item.icon className="h-7 w-7" />
                 </div>
 
-                <p className="mt-3 text-sm font-medium text-gray-700">
+                <p className="mt-4 font-semibold text-gray-900">
                   {item.title}
                 </p>
               </div>
@@ -98,21 +112,64 @@ export default function PhoneMockup() {
 
           </div>
 
-          {/* CTA Card */}
-          <div className="mt-8 rounded-xl bg-yellow-400 p-5">
+          <div className="rounded-3xl border border-gray-200 p-5">
 
-            <p className="text-sm font-semibold text-black">
-              Become a Rider 🚴
-            </p>
+            <div className="flex items-center justify-between">
 
-            <p className="mt-2 text-xs leading-5 text-black/75">
-              Deliver orders around campus and earn money on your own schedule.
+              <div>
+
+                <p className="text-sm text-gray-500">
+                  Active Order
+                </p>
+
+                <h4 className="mt-1 font-bold text-gray-900">
+                  Chicken Republic
+                </h4>
+
+              </div>
+
+              <ChevronRight className="h-5 w-5 text-gray-400" />
+
+            </div>
+
+            <div className="mt-4 h-2 overflow-hidden rounded-full bg-gray-200">
+
+              <div className="h-full w-3/4 rounded-full bg-yellow-400" />
+
+            </div>
+
+            <p className="mt-3 text-sm text-gray-500">
+              Rider arriving in 8 mins
             </p>
 
           </div>
 
+          <div className="rounded-3xl bg-gray-900 p-5 text-white">
+
+            <div className="flex items-center gap-3">
+
+              <GraduationCap className="h-6 w-6 text-yellow-400" />
+
+              <div>
+
+                <h4 className="font-semibold">
+                  Campus Tip
+                </h4>
+
+                <p className="text-sm text-gray-300">
+                  Check today's deals from nearby vendors.
+                </p>
+
+              </div>
+
+            </div>
+
+          </div>
+
         </div>
+
       </div>
+
     </div>
   );
 }
