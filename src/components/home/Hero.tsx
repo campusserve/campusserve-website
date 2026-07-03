@@ -1,73 +1,80 @@
+import { ArrowRight, Store } from "lucide-react";
+import { Button } from "@/components/ui/button";
+
+import Container from "@/components/shared/Container";
+import PhoneMockup from "./PhoneMockup";
+import TrustBar from "./TrustBar";
+
 export default function Hero() {
   return (
-    <section className="bg-gradient-to-b from-white to-yellow-50">
+    <section className="bg-gradient-to-b from-white via-yellow-50/40 to-white">
 
-      <div className="mx-auto grid min-h-[88vh] max-w-7xl items-center gap-20 px-6 lg:grid-cols-2">
+      <Container className="py-16 lg:py-20">
 
-        <div>
+        <div className="grid items-center gap-16 lg:grid-cols-2">
 
-          <span className="rounded-full bg-yellow-100 px-4 py-2 text-sm font-semibold text-yellow-700">
-            🚀 Launching Across Nigerian Campuses
-          </span>
+          {/* Left */}
 
-          <h1 className="mt-8 text-6xl font-black leading-tight text-gray-900">
+          <div>
 
-            Campus Life,
-
-            <span className="block text-yellow-500">
-              Simplified.
+            <span className="inline-flex rounded-full bg-yellow-100 px-4 py-2 text-sm font-semibold text-yellow-700">
+              Launching Across Nigerian Campuses
             </span>
 
-          </h1>
+<h1 className="mt-8 max-w-2xl text-5xl font-black leading-[1.02] tracking-tight text-gray-900 lg:text-7xl">
+              Everything Students Need.
 
-          <p className="mt-8 text-xl leading-9 text-gray-600">
+              <span className="mt-2 block text-yellow-500">
+                One Platform.
+              </span>
 
-            Order food.
+            </h1>
 
-            Shop campus stores.
+            <p className="mt-8 max-w-lg text-lg leading-8 text-gray-600">
 
-            Send packages.
+              Order food, discover hostels, shop campus stores,
+              send packages and connect with trusted student services —
+              all from one platform built specifically for university communities.
 
-            Find trusted student services.
+            </p>
 
-            Everything your campus needs,
-            all from one platform.
+            <div className="mt-10 flex flex-wrap gap-4">
 
-          </p>
+              <Button
+                size="lg"
+                className="bg-yellow-400 text-black hover:bg-yellow-500"
+              >
+                Get Early Access
 
-          <div className="mt-12 flex gap-5">
+                <ArrowRight className="ml-2 h-4 w-4" />
+              </Button>
 
-            <button className="rounded-full bg-yellow-400 px-8 py-4 font-semibold shadow-xl transition hover:scale-105 hover:bg-yellow-500">
-              Join Waitlist
-            </button>
+              <Button
+                variant="outline"
+                size="lg"
+              >
+                <Store className="mr-2 h-4 w-4" />
 
-            <button className="rounded-full border border-gray-300 bg-white px-8 py-4 font-semibold hover:bg-gray-100">
-              Become a Vendor
-            </button>
-
-          </div>
-
-        </div>
-
-        {/* Right Side */}
-
-        <div className="hidden lg:flex justify-center">
-
-          <div className="relative">
-
-            <div className="h-96 w-96 rounded-full bg-yellow-100"></div>
-
-            <div className="absolute left-16 top-16 flex h-64 w-64 items-center justify-center rounded-full bg-yellow-400 text-8xl font-black text-white shadow-2xl">
-
-              CS
+                Become a Vendor
+              </Button>
 
             </div>
 
+            <TrustBar />
+
+          </div>
+
+          {/* Right */}
+
+          <div className="flex justify-center items-center">
+
+            <PhoneMockup />
+
           </div>
 
         </div>
 
-      </div>
+      </Container>
 
     </section>
   );
