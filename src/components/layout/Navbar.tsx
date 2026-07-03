@@ -6,10 +6,11 @@ import { Button } from "@/components/ui/button";
 import Container from "@/components/shared/Container";
 
 const navigation = [
-  { name: "Home", href: "#" },
+  { name: "Home", href: "#home" },
   { name: "Services", href: "#services" },
   { name: "How It Works", href: "#how-it-works" },
-  { name: "Vendors", href: "#vendors" },
+  { name: "Testimonials", href: "#testimonials" },
+  { name: "Download", href: "#download" },
   { name: "Contact", href: "#contact" },
 ];
 

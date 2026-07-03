@@ -157,10 +157,10 @@
     @apply border-border outline-ring/50;
   }
 
-  html {
-    scroll-behavior: smooth;
-    font-family: var(--font-geist-sans);
-  }
+ html {
+  @apply font-sans;
+  scroll-behavior: smooth;
+}
 
   body {
     @apply bg-background text-foreground antialiased;
