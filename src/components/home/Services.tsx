@@ -1,33 +1,36 @@
 import SectionHeading from "@/components/shared/SectionHeading";
 import FeatureCard from "@/components/shared/FeatureCard";
+import Container from "@/components/shared/Container";
+
 import { services } from "@/data/services";
 
 export default function Services() {
   return (
     <section
       id="services"
-      className="bg-white py-28"
+      className="bg-white py-24 lg:py-32"
     >
-      <div className="mx-auto max-w-7xl px-6">
+      <Container>
 
         <SectionHeading
-          badge="Our Services"
-          title="Everything You Need Around Campus"
-          subtitle="CampusServe brings together everyday campus services into one trusted platform built specifically for students, vendors and riders."
+          badge="Everything You Need"
+          title="Campus Life"
+          highlight="Made Simple"
+          description="CampusServe brings every essential student service together in one mobile application."
         />
 
-        <div className="grid gap-8 md:grid-cols-2 xl:grid-cols-3">
+        <div className="mt-16 grid gap-8 md:grid-cols-2 xl:grid-cols-3">
           {services.map((service) => (
             <FeatureCard
               key={service.title}
+              icon={service.icon}
               title={service.title}
               description={service.description}
-              icon={service.icon}
             />
           ))}
         </div>
 
-      </div>
+      </Container>
     </section>
   );
 }

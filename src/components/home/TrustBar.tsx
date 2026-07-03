@@ -1,50 +1,36 @@
-import {
-  ShieldCheck,
-  Truck,
-  Users,
-} from "lucide-react";
-
-const items = [
-  {
-    icon: ShieldCheck,
-    title: "Trusted Vendors",
-    description: "Verified businesses serving students.",
-  },
-  {
-    icon: Truck,
-    title: "Fast Campus Delivery",
-    description: "Quick deliveries within campus communities.",
-  },
-  {
-    icon: Users,
-    title: "Built for Students",
-    description: "Designed around everyday campus life.",
-  },
-];
+import { ShieldCheck, Store, Smartphone } from "lucide-react";
 
 export default function TrustBar() {
+  const items = [
+    {
+      icon: ShieldCheck,
+      text: "Trusted Campus Vendors",
+    },
+    {
+      icon: Store,
+      text: "Vendor Registration Open",
+    },
+    {
+      icon: Smartphone,
+      text: "Mobile App Coming Soon",
+    },
+  ];
+
   return (
-    <div className="mt-12 grid gap-6 md:grid-cols-3">
-      {items.map((item) => (
-        <div
-          key={item.title}
-          className="flex items-start gap-4 rounded-2xl border border-gray-100 bg-white p-5 shadow-sm transition hover:shadow-md"
-        >
-          <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-yellow-100">
-            <item.icon className="h-6 w-6 text-yellow-600" />
-          </div>
+    <div className="mt-10 flex flex-wrap gap-6">
+      {items.map((item) => {
+        const Icon = item.icon;
 
-          <div>
-            <h4 className="font-semibold text-gray-900">
-              {item.title}
-            </h4>
-
-            <p className="mt-1 text-sm leading-6 text-gray-600">
-              {item.description}
-            </p>
+        return (
+          <div
+            key={item.text}
+            className="flex items-center gap-2 text-sm font-medium text-gray-600"
+          >
+            <Icon className="h-5 w-5 text-yellow-500" />
+            <span>{item.text}</span>
           </div>
-        </div>
-      ))}
+        );
+      })}
     </div>
   );
 }

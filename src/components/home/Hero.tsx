@@ -1,7 +1,11 @@
-import { ArrowRight, Store } from "lucide-react";
+import { Store } from "lucide-react";
+
 import { Button } from "@/components/ui/button";
 
 import Container from "@/components/shared/Container";
+import PrimaryButton from "@/components/shared/PrimaryButton";
+import SectionBadge from "@/components/shared/SectionBadge";
+
 import PhoneMockup from "./PhoneMockup";
 import TrustBar from "./TrustBar";
 
@@ -16,13 +20,11 @@ export default function Hero() {
       <Container className="py-16 lg:py-20">
         <div className="grid items-center gap-16 lg:grid-cols-2">
 
-          {/* Left */}
-
           <div>
 
-            <span className="inline-flex rounded-full bg-yellow-100 px-4 py-2 text-sm font-semibold text-yellow-700">
+            <SectionBadge>
               {hero.badge}
-            </span>
+            </SectionBadge>
 
             <h1 className="mt-8 max-w-2xl text-5xl font-black leading-[1.02] tracking-tight text-gray-900 lg:text-7xl">
               {hero.title}
@@ -38,38 +40,27 @@ export default function Hero() {
 
             <div className="mt-10 flex flex-wrap gap-4">
 
-              <Button
-                size="lg"
-                className="bg-yellow-400 text-black hover:bg-yellow-500"
-              >
+              <PrimaryButton>
                 {hero.primaryButton}
-
-                <ArrowRight className="ml-2 h-4 w-4" />
-              </Button>
+              </PrimaryButton>
 
               <Button
                 variant="outline"
                 size="lg"
+                className="h-14 rounded-2xl px-8"
               >
-                <Store className="mr-2 h-4 w-4" />
-
+                <Store className="mr-2 h-5 w-5" />
                 {hero.secondaryButton}
               </Button>
 
             </div>
 
-            <div className="mt-10">
-              <TrustBar />
-            </div>
+            <TrustBar />
 
           </div>
 
-          {/* Right */}
-
           <div className="flex items-center justify-center">
-
             <PhoneMockup />
-
           </div>
 
         </div>
