@@ -83,7 +83,7 @@ export default function RiderSidebar() {
               href={item.href}
               className={`mb-2 flex items-center gap-4 rounded-2xl px-5 py-4 transition ${
                 active
-                  ? "bg-yellow-400 font-semibold text-black"
+                  ? "bg-primary font-semibold text-black"
                   : "text-gray-600 hover:bg-gray-100"
               }`}
             >

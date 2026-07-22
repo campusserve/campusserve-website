@@ -71,7 +71,7 @@ export default function PartnerSidebar() {
               href={item.href}
               className={`mb-2 flex items-center gap-4 rounded-2xl px-5 py-4 ${
                 active
-                  ? "bg-yellow-400 font-semibold text-black"
+                  ? "bg-primary font-semibold text-black"
                   : "hover:bg-gray-100 text-gray-600"
               }`}
             >

@@ -20,18 +20,18 @@ export default function SectionHeading({
       }`}
     >
       {badge && (
-        <span className="inline-flex items-center rounded-full border border-yellow-200 bg-yellow-100 px-5 py-2 text-sm font-semibold text-yellow-700">
+        <span className="inline-flex items-center rounded-full border border-primary/20 bg-primary/10 px-5 py-2 text-sm font-semibold text-primary shadow-sm">
           {badge}
         </span>
       )}
 
-      <h2 className="mt-8 text-4xl font-black leading-tight tracking-tight text-gray-900 md:text-5xl lg:text-6xl">
+      <h2 className="mt-8 text-4xl font-black leading-tight tracking-tight text-foreground md:text-5xl lg:text-6xl">
         {title}
 
         {highlight && (
           <>
             <br />
-            <span className="text-yellow-500">
+            <span className="bg-gradient-to-r from-primary to-[#E67E0E] bg-clip-text text-transparent">
               {highlight}
             </span>
           </>
@@ -39,7 +39,7 @@ export default function SectionHeading({
       </h2>
 
       {description && (
-        <p className="mx-auto mt-8 max-w-3xl text-xl leading-9 text-gray-600">
+        <p className="mx-auto mt-8 max-w-3xl text-xl leading-9 text-muted-foreground">
           {description}
         </p>
       )}

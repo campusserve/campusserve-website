@@ -2,7 +2,7 @@ import Link from "next/link";
 
 export default function SuccessPage() {
   return (
-    <main className="flex min-h-screen items-center justify-center bg-yellow-50">
+    <main className="flex min-h-screen items-center justify-center bg-accent">
 
       <div className="w-full max-w-xl rounded-3xl bg-white p-12 text-center shadow-xl">
 
@@ -21,7 +21,7 @@ export default function SuccessPage() {
 
         <Link
           href="/"
-          className="mt-10 inline-flex rounded-2xl bg-yellow-400 px-8 py-4 font-semibold text-black hover:bg-yellow-500"
+          className="mt-10 inline-flex rounded-2xl bg-primary px-8 py-4 font-semibold text-primary-foreground transition hover:opacity-90"
         >
           Back Home
         </Link>

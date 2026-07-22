@@ -124,7 +124,7 @@ export default function AdminPage() {
 
           <button
             onClick={exportCSV}
-            className="flex items-center gap-2 rounded-2xl bg-yellow-400 px-6 py-3 font-semibold text-black transition hover:bg-yellow-500"
+            className="flex items-center gap-2 rounded-2xl bg-primary px-6 py-3 font-semibold text-primary-foreground transition hover:opacity-90"
           >
             <Download className="h-5 w-5" />
 
@@ -174,7 +174,7 @@ export default function AdminPage() {
               onChange={(e) =>
                 setSearch(e.target.value)
               }
-              className="h-14 w-full rounded-2xl border border-gray-300 pl-12 pr-4 outline-none focus:border-yellow-400"
+              className="h-14 w-full rounded-2xl border border-gray-300 pl-12 pr-4 outline-none focus:border-primary"
             />
 
           </div>
@@ -245,7 +245,7 @@ export default function AdminPage() {
 
                       <td className="p-4">
 
-                        <span className="rounded-full bg-yellow-100 px-3 py-1 text-sm font-semibold text-yellow-700">
+                        <span className="rounded-full bg-primary/10 px-3 py-1 text-sm font-semibold text-primary">
                           {user.role}
                         </span>
 
@@ -301,7 +301,7 @@ function Card({
 
         </div>
 
-        <div className="rounded-2xl bg-yellow-100 p-4 text-yellow-700">
+        <div className="rounded-2xl bg-primary/10 p-4 text-primary">
           {icon}
         </div>
 

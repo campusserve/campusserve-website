@@ -49,7 +49,7 @@ export default function Testimonials() {
             >
               <div className="flex items-center gap-4">
 
-                <div className="flex h-14 w-14 items-center justify-center rounded-full bg-yellow-400 text-lg font-bold text-black">
+                <div className="flex h-14 w-14 items-center justify-center rounded-full bg-primary text-lg font-bold text-black">
                   {item.avatar}
                 </div>
 

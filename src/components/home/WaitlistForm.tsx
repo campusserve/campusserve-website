@@ -69,7 +69,7 @@ export default function WaitlistForm() {
 
   if (joined) {
     return (
-      <div className="mx-auto mt-10 max-w-xl rounded-3xl bg-white p-10 text-center shadow-xl">
+      <div className="mx-auto mt-10 max-w-xl rounded-3xl bg-white p-10 text-center shadow-2xl">
 
         <CheckCircle2 className="mx-auto h-16 w-16 text-green-500" />
 
@@ -96,9 +96,9 @@ export default function WaitlistForm() {
 
   return (
     <>
-      <div className="mb-6 flex justify-center">
+      <div className="mb-8 flex justify-center">
 
-        <div className="inline-flex items-center gap-2 rounded-full bg-black px-5 py-3 text-sm font-semibold text-white">
+        <div className="inline-flex items-center gap-2 rounded-full bg-black px-6 py-3 text-sm font-semibold text-white shadow-2xl">
 
           <Users className="h-5 w-5" />
 
@@ -109,15 +109,16 @@ export default function WaitlistForm() {
       </div>
 
       {message && (
-        <div className="mx-auto mb-6 max-w-xl rounded-2xl border border-yellow-300 bg-yellow-50 p-4 text-center font-medium text-yellow-800">
+        <div className="mx-auto mb-6 max-w-xl rounded-2xl border border-yellow-200 bg-white p-4 text-center font-medium text-yellow-800 shadow-lg">
           {message}
         </div>
       )}
 
       <form
         onSubmit={handleSubmit}
-        className="mx-auto mt-8 max-w-xl space-y-5"
+        className="mx-auto mt-8 max-w-xl space-y-6"
       >
+
         <input
           required
           placeholder="Full Name"
@@ -128,7 +129,7 @@ export default function WaitlistForm() {
               full_name: e.target.value,
             })
           }
-          className="h-14 w-full rounded-2xl border border-gray-300 px-5 outline-none focus:border-yellow-400"
+          className="h-16 w-full rounded-2xl border border-white bg-white px-6 text-lg text-gray-900 placeholder:text-gray-500 shadow-xl outline-none transition-all duration-300 focus:-translate-y-0.5 focus:ring-4 focus:ring-white/40"
         />
 
         <input
@@ -142,7 +143,7 @@ export default function WaitlistForm() {
               email: e.target.value,
             })
           }
-          className="h-14 w-full rounded-2xl border border-gray-300 px-5 outline-none focus:border-yellow-400"
+          className="h-16 w-full rounded-2xl border border-white bg-white px-6 text-lg text-gray-900 placeholder:text-gray-500 shadow-xl outline-none transition-all duration-300 focus:-translate-y-0.5 focus:ring-4 focus:ring-white/40"
         />
 
         <input
@@ -155,7 +156,7 @@ export default function WaitlistForm() {
               university: e.target.value,
             })
           }
-          className="h-14 w-full rounded-2xl border border-gray-300 px-5 outline-none focus:border-yellow-400"
+          className="h-16 w-full rounded-2xl border border-white bg-white px-6 text-lg text-gray-900 placeholder:text-gray-500 shadow-xl outline-none transition-all duration-300 focus:-translate-y-0.5 focus:ring-4 focus:ring-white/40"
         />
 
         <select
@@ -166,7 +167,7 @@ export default function WaitlistForm() {
               role: e.target.value,
             })
           }
-          className="h-14 w-full rounded-2xl border border-gray-300 px-5 outline-none focus:border-yellow-400"
+          className="h-16 w-full rounded-2xl border border-white bg-white px-6 text-lg text-gray-900 shadow-xl outline-none transition-all duration-300 focus:-translate-y-0.5 focus:ring-4 focus:ring-white/40"
         >
           <option>Student</option>
           <option>Vendor</option>
@@ -175,7 +176,7 @@ export default function WaitlistForm() {
 
         <Button
           disabled={loading}
-          className="h-14 w-full rounded-2xl bg-yellow-400 text-lg font-semibold text-black hover:bg-yellow-500"
+          className="h-16 w-full rounded-2xl bg-gradient-to-r from-yellow-300 to-amber-400 text-xl font-extrabold text-black shadow-2xl transition-all duration-300 hover:-translate-y-1 hover:from-yellow-400 hover:to-orange-400 hover:shadow-[0_20px_45px_rgba(0,0,0,0.18)] disabled:cursor-not-allowed disabled:opacity-70"
         >
           {loading ? (
             <>
@@ -186,6 +187,7 @@ export default function WaitlistForm() {
             "Join Waitlist"
           )}
         </Button>
+
       </form>
     </>
   );

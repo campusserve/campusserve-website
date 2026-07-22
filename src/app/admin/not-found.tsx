@@ -6,7 +6,7 @@ export default function NotFound() {
 
       <div className="w-full max-w-lg rounded-3xl bg-white p-10 text-center shadow-xl">
 
-        <h1 className="text-6xl font-black text-yellow-500">
+        <h1 className="text-6xl font-black text-primary">
           404
         </h1>
 
@@ -20,7 +20,7 @@ export default function NotFound() {
 
         <Link
           href="/admin"
-          className="mt-8 inline-flex rounded-2xl bg-yellow-400 px-8 py-3 font-semibold text-black transition hover:bg-yellow-500"
+          className="mt-8 inline-flex rounded-2xl bg-primary px-8 py-3 font-semibold text-primary-foreground transition hover:opacity-90"
         >
           Back to Dashboard
         </Link>

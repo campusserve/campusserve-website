@@ -44,8 +44,8 @@ export default function Navbar() {
       <header
         className={`fixed inset-x-0 top-0 z-50 transition-all duration-300 ${
           scrolled
-            ? "border-b border-gray-200/80 bg-white/90 shadow-lg backdrop-blur-xl"
-            : "bg-white/80 backdrop-blur-lg"
+            ? "border-b border-border bg-background/90 shadow-lg backdrop-blur-xl"
+            : "bg-background/80 backdrop-blur-lg"
         }`}
       >
         <Container>
@@ -54,36 +54,25 @@ export default function Navbar() {
 
             <Link
               href="/"
-              className="flex items-center gap-3"
+              className="flex items-center"
             >
               <Image
                 src="/images/logo.png"
                 alt="CampusServe"
-                width={56}
-                height={56}
+                width={260}
+                height={80}
                 priority
-                className="object-contain"
+                className="h-14 w-auto object-contain"
               />
-
-              <div>
-                <h1 className="text-2xl font-black text-gray-900 lg:text-3xl">
-                  CampusServe
-                </h1>
-
-                <p className="text-sm text-gray-500">
-                  Campus Life, Simplified
-                </p>
-              </div>
-
             </Link>
 
-            <nav className="hidden xl:flex items-center gap-10">
+            <nav className="hidden items-center gap-10 xl:flex">
 
               {navigation.map((item) => (
                 <Link
                   key={item.name}
                   href={item.href}
-                  className="relative text-base font-medium text-gray-600 transition hover:text-black after:absolute after:-bottom-2 after:left-0 after:h-0.5 after:w-0 after:bg-yellow-400 after:transition-all hover:after:w-full"
+                  className="relative text-base font-medium text-muted-foreground transition hover:text-foreground after:absolute after:-bottom-2 after:left-0 after:h-0.5 after:w-0 after:bg-primary after:transition-all hover:after:w-full"
                 >
                   {item.name}
                 </Link>
@@ -93,7 +82,7 @@ export default function Navbar() {
 
             <div className="hidden xl:block">
 
-              <Button className="rounded-2xl bg-yellow-400 px-8 text-black hover:bg-yellow-500">
+              <Button className="rounded-2xl bg-primary px-8 text-primary-foreground hover:opacity-90">
                 Join Waitlist
               </Button>
 
@@ -101,7 +90,7 @@ export default function Navbar() {
 
             <button
               onClick={() => setMobileOpen(true)}
-              className="rounded-xl p-2 hover:bg-gray-100 xl:hidden"
+              className="rounded-xl p-2 transition hover:bg-muted xl:hidden"
             >
               <Menu className="h-7 w-7" />
             </button>
@@ -126,19 +115,23 @@ export default function Navbar() {
         />
 
         <div
-          className={`absolute right-0 top-0 h-full w-[85%] max-w-sm bg-white shadow-2xl transition-transform duration-300 ${
+          className={`absolute right-0 top-0 h-full w-[85%] max-w-sm bg-card shadow-2xl transition-transform duration-300 ${
             mobileOpen ? "translate-x-0" : "translate-x-full"
           }`}
         >
-          <div className="flex items-center justify-between border-b p-6">
+          <div className="flex items-center justify-between border-b border-border p-6">
 
-            <h2 className="text-2xl font-black">
-              Menu
-            </h2>
+            <Image
+              src="/images/logo.png"
+              alt="CampusServe"
+              width={200}
+              height={60}
+              className="h-10 w-auto object-contain"
+            />
 
             <button
               onClick={() => setMobileOpen(false)}
-              className="rounded-xl p-2 hover:bg-gray-100"
+              className="rounded-xl p-2 transition hover:bg-muted"
             >
               <X className="h-7 w-7" />
             </button>
@@ -152,13 +145,13 @@ export default function Navbar() {
                 key={item.name}
                 href={item.href}
                 onClick={() => setMobileOpen(false)}
-                className="rounded-xl px-4 py-4 text-lg font-medium text-gray-700 transition hover:bg-yellow-50 hover:text-yellow-600"
+                className="rounded-xl px-4 py-4 text-lg font-medium text-muted-foreground transition hover:bg-primary/10 hover:text-primary"
               >
                 {item.name}
               </Link>
             ))}
 
-            <Button className="mt-8 h-12 rounded-2xl bg-yellow-400 text-black hover:bg-yellow-500">
+            <Button className="mt-8 h-12 rounded-2xl bg-primary text-primary-foreground hover:opacity-90">
               Join Waitlist
             </Button>
 

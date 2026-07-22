@@ -9,7 +9,7 @@ export default function FinalCTA() {
     >
       <Container>
 
-        <div className="rounded-[48px] bg-gradient-to-br from-yellow-400 via-amber-400 to-yellow-500 px-8 py-24 shadow-2xl lg:px-20">
+        <div className="rounded-[48px] bg-gradient-to-br from-primary via-orange-500 to-orange-600 px-8 py-24 shadow-2xl lg:px-20">
 
           <div className="mx-auto max-w-4xl text-center">
 

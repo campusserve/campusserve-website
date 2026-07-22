@@ -14,22 +14,18 @@ const actions = [
   {
     title: "Food",
     icon: UtensilsCrossed,
-    color: "bg-orange-100 text-orange-600",
   },
   {
     title: "Market",
     icon: ShoppingBag,
-    color: "bg-blue-100 text-blue-600",
   },
   {
     title: "Hostel",
     icon: House,
-    color: "bg-purple-100 text-purple-600",
   },
   {
     title: "Delivery",
     icon: Package,
-    color: "bg-green-100 text-green-600",
   },
 ];
 
@@ -44,33 +40,38 @@ export default function PhoneMockup() {
       : "Good Evening 🌙";
 
   return (
-    <div className="relative flex justify-center xl:justify-end">
+    <div className="relative flex justify-center">
 
-      <div className="absolute -inset-14 rounded-full bg-yellow-300/30 blur-3xl" />
+      {/* Background Glow */}
+      <div className="absolute -inset-12 rounded-full bg-primary/20 blur-3xl" />
 
-      <div className="relative w-[360px] overflow-hidden rounded-[44px] border border-gray-200 bg-white shadow-[0_40px_80px_rgba(0,0,0,0.12)]">
+      {/* Phone */}
+      <div className="relative w-[360px] overflow-hidden rounded-[44px] border border-border bg-white shadow-[0_45px_90px_rgba(0,0,0,0.16)] transition-all duration-500 hover:-translate-y-2 hover:shadow-[0_55px_100px_rgba(0,0,0,0.18)]">
 
+        {/* Dynamic Island */}
         <div className="flex justify-center pt-4">
           <div className="h-2 w-28 rounded-full bg-gray-300" />
         </div>
 
         <div className="space-y-6 p-6">
 
+          {/* Greeting */}
           <div className="flex items-center justify-between">
 
             <div>
 
-              <p className="text-sm text-gray-500">
+              <p className="text-sm text-muted-foreground">
                 {greeting}
               </p>
 
             </div>
 
-            <Bell className="h-6 w-6 text-gray-400" />
+            <Bell className="h-6 w-6 text-muted-foreground" />
 
           </div>
 
-          <div className="rounded-3xl bg-gradient-to-r from-yellow-400 to-amber-400 p-5 text-black">
+          {/* Wallet Card */}
+          <div className="rounded-3xl bg-gradient-to-r from-primary to-[#E67E0E] p-5 text-black">
 
             <p className="text-sm opacity-80">
               Available Balance
@@ -88,30 +89,33 @@ export default function PhoneMockup() {
 
           </div>
 
+          {/* Search */}
           <div className="flex items-center rounded-2xl bg-gray-100 px-4 py-3">
 
-            <Search className="h-5 w-5 text-gray-400" />
+            <Search className="h-5 w-5 text-muted-foreground" />
 
-            <span className="ml-3 text-gray-500">
+            <span className="ml-3 text-muted-foreground">
               Search food, vendors...
             </span>
 
           </div>
 
+          {/* Services */}
           <div className="grid grid-cols-2 gap-4">
 
             {actions.map((item) => (
               <div
                 key={item.title}
-                className="rounded-2xl bg-gray-50 p-5 transition hover:-translate-y-1 hover:shadow-lg"
+                className="rounded-2xl border border-border bg-card p-5 transition-all duration-300 hover:-translate-y-1 hover:shadow-xl"
               >
-                <div
-                  className={`flex h-14 w-14 items-center justify-center rounded-2xl ${item.color}`}
-                >
-                  <item.icon className="h-7 w-7" />
+
+                <div className="flex h-14 w-14 items-center justify-center rounded-2xl bg-primary/10">
+
+                  <item.icon className="h-7 w-7 text-primary" />
+
                 </div>
 
-                <p className="mt-4 font-semibold text-gray-900">
+                <p className="mt-4 font-semibold text-foreground">
                   {item.title}
                 </p>
 
@@ -120,43 +124,45 @@ export default function PhoneMockup() {
 
           </div>
 
-          <div className="rounded-3xl border border-gray-200 p-5">
+          {/* Active Order */}
+          <div className="rounded-3xl border border-border p-5">
 
             <div className="flex items-center justify-between">
 
               <div>
 
-                <p className="text-sm text-gray-500">
+                <p className="text-sm text-muted-foreground">
                   Active Order
                 </p>
 
-                <h4 className="mt-1 font-bold text-gray-900">
+                <h4 className="mt-1 font-bold text-foreground">
                   Campus Kitchen
                 </h4>
 
               </div>
 
-              <ChevronRight className="h-5 w-5 text-gray-400" />
+              <ChevronRight className="h-5 w-5 text-muted-foreground" />
 
             </div>
 
             <div className="mt-4 h-2 overflow-hidden rounded-full bg-gray-200">
 
-              <div className="h-full w-3/4 rounded-full bg-yellow-400" />
+              <div className="h-full w-3/4 rounded-full bg-primary" />
 
             </div>
 
-            <p className="mt-3 text-sm text-gray-500">
+            <p className="mt-3 text-sm text-muted-foreground">
               Estimated arrival • 8 mins
             </p>
 
           </div>
 
+          {/* Tip Card */}
           <div className="rounded-3xl bg-gray-900 p-5 text-white">
 
             <div className="flex items-center gap-3">
 
-              <GraduationCap className="h-6 w-6 text-yellow-400" />
+              <GraduationCap className="h-6 w-6 text-primary" />
 
               <div>
 

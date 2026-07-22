@@ -13,7 +13,7 @@ export default function PrimaryButton({
   return (
     <Link
       href={href}
-      className="group inline-flex h-14 items-center justify-center rounded-2xl bg-yellow-400 px-8 text-lg font-semibold text-black shadow-lg transition-all duration-300 hover:-translate-y-1 hover:bg-yellow-500 hover:shadow-2xl"
+      className="group inline-flex h-14 items-center justify-center rounded-2xl bg-primary px-8 text-lg font-semibold text-black shadow-lg transition-all duration-300 hover:-translate-y-1 hover:opacity-90 hover:shadow-2xl"
     >
       <span>{children}</span>
 

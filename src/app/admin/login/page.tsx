@@ -32,7 +32,7 @@ export default function AdminLoginPage() {
   }
 
   return (
-    <main className="flex min-h-screen items-center justify-center bg-gradient-to-br from-yellow-50 to-white p-6">
+    <main className="flex min-h-screen items-center justify-center bg-gradient-to-br from-accent to-white p-6">
 
       <div className="w-full max-w-md rounded-3xl bg-white p-10 shadow-2xl">
 
@@ -64,7 +64,7 @@ export default function AdminLoginPage() {
               placeholder="Email"
               value={email}
               onChange={(e) => setEmail(e.target.value)}
-              className="h-14 w-full rounded-2xl border border-gray-300 pl-12 pr-4 outline-none focus:border-yellow-400"
+              className="h-14 w-full rounded-2xl border border-gray-300 pl-12 pr-4 outline-none focus:border-primary"
             />
 
           </div>
@@ -79,12 +79,12 @@ export default function AdminLoginPage() {
               placeholder="Password"
               value={password}
               onChange={(e) => setPassword(e.target.value)}
-              className="h-14 w-full rounded-2xl border border-gray-300 pl-12 pr-4 outline-none focus:border-yellow-400"
+              className="h-14 w-full rounded-2xl border border-gray-300 pl-12 pr-4 outline-none focus:border-primary"
             />
 
           </div>
 
-          <Button className="h-14 w-full rounded-2xl bg-yellow-400 text-lg text-black hover:bg-yellow-500">
+          <Button className="h-14 w-full rounded-2xl bg-primary text-lg text-primary-foreground hover:opacity-90">
             Login
           </Button>
 

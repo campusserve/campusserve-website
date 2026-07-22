@@ -8,9 +8,11 @@ export default function Services() {
   return (
     <section
       id="services"
-      className="bg-gradient-to-b from-white to-gray-50 py-32"
+      className="relative overflow-hidden bg-gradient-to-b from-background via-primary/5 to-background py-32"
     >
-      <Container>
+      <div className="absolute left-1/2 top-0 h-96 w-96 -translate-x-1/2 rounded-full bg-primary/10 blur-3xl" />
+
+      <Container className="relative">
 
         <SectionHeading
           badge="Everything Students Need"

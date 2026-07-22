@@ -55,22 +55,27 @@ export default function RiderPage() {
       >
 
         {[
-          ["Full Name","full_name"],
-          ["Email","email"],
-          ["Phone","phone"],
-          ["University","university"],
-          ["Vehicle","vehicle"],
-        ].map(([label,key])=>(
+          ["Full Name", "full_name"],
+          ["Email", "email"],
+          ["Phone", "phone"],
+          ["University", "university"],
+          ["Vehicle", "vehicle"],
+        ].map(([label, key]) => (
           <input
             key={key}
             placeholder={label}
             value={(form as any)[key]}
-            onChange={(e)=>setForm({...form,[key]:e.target.value})}
+            onChange={(e) =>
+              setForm({
+                ...form,
+                [key]: e.target.value,
+              })
+            }
             className="h-14 w-full rounded-2xl border px-5"
           />
         ))}
 
-        <Button className="h-14 w-full bg-yellow-400 text-black">
+        <Button className="h-14 w-full bg-primary text-primary-foreground hover:opacity-90">
           {loading ? "Submitting..." : "Submit Application"}
         </Button>
 
