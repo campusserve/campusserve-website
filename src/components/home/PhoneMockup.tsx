@@ -34,6 +34,15 @@ const actions = [
 ];
 
 export default function PhoneMockup() {
+  const hour = new Date().getHours();
+
+  const greeting =
+    hour < 12
+      ? "Good Morning 👋"
+      : hour < 17
+      ? "Good Afternoon ☀️"
+      : "Good Evening 🌙";
+
   return (
     <div className="relative flex justify-center xl:justify-end">
 
@@ -50,13 +59,11 @@ export default function PhoneMockup() {
           <div className="flex items-center justify-between">
 
             <div>
+
               <p className="text-sm text-gray-500">
-                Good Morning 👋
+                {greeting}
               </p>
 
-              <h2 className="mt-1 text-3xl font-black text-gray-900">
-                Paul
-              </h2>
             </div>
 
             <Bell className="h-6 w-6 text-gray-400" />
@@ -66,13 +73,13 @@ export default function PhoneMockup() {
           <div className="rounded-3xl bg-gradient-to-r from-yellow-400 to-amber-400 p-5 text-black">
 
             <p className="text-sm opacity-80">
-              Campus Wallet
+              Available Balance
             </p>
 
             <div className="mt-2 flex items-center justify-between">
 
               <h3 className="text-3xl font-black">
-                ₦25,400
+                ₦12,500
               </h3>
 
               <Wallet className="h-9 w-9" />
@@ -86,7 +93,7 @@ export default function PhoneMockup() {
             <Search className="h-5 w-5 text-gray-400" />
 
             <span className="ml-3 text-gray-500">
-              Search...
+              Search food, vendors...
             </span>
 
           </div>
@@ -107,6 +114,7 @@ export default function PhoneMockup() {
                 <p className="mt-4 font-semibold text-gray-900">
                   {item.title}
                 </p>
+
               </div>
             ))}
 
@@ -123,7 +131,7 @@ export default function PhoneMockup() {
                 </p>
 
                 <h4 className="mt-1 font-bold text-gray-900">
-                  Chicken Republic
+                  Campus Kitchen
                 </h4>
 
               </div>
@@ -139,7 +147,7 @@ export default function PhoneMockup() {
             </div>
 
             <p className="mt-3 text-sm text-gray-500">
-              Rider arriving in 8 mins
+              Estimated arrival • 8 mins
             </p>
 
           </div>
@@ -157,7 +165,7 @@ export default function PhoneMockup() {
                 </h4>
 
                 <p className="text-sm text-gray-300">
-                  Check today's deals from nearby vendors.
+                  Save more with exclusive student offers around campus.
                 </p>
 
               </div>
