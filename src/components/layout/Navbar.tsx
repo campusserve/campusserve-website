@@ -50,7 +50,7 @@ export default function Navbar() {
       >
         <Container>
 
-          <div className="flex h-20 items-center justify-between">
+          <div className="flex h-[88px] items-center justify-between">
 
             <Link
               href="/"
@@ -62,7 +62,7 @@ export default function Navbar() {
                 width={260}
                 height={80}
                 priority
-                className="h-14 w-auto object-contain"
+                className="h-16 w-auto object-contain xl:h-14"
               />
             </Link>
 
@@ -90,9 +90,9 @@ export default function Navbar() {
 
             <button
               onClick={() => setMobileOpen(true)}
-              className="rounded-xl p-2 transition hover:bg-muted xl:hidden"
+              className="rounded-xl p-3 transition hover:bg-muted xl:hidden"
             >
-              <Menu className="h-7 w-7" />
+              <Menu className="h-8 w-8" />
             </button>
 
           </div>
@@ -100,7 +100,7 @@ export default function Navbar() {
         </Container>
       </header>
 
-      <div className="h-20" />
+      <div className="h-[88px]" />
 
       <div
         className={`fixed inset-0 z-[60] transition-all duration-300 xl:hidden ${
@@ -119,14 +119,14 @@ export default function Navbar() {
             mobileOpen ? "translate-x-0" : "translate-x-full"
           }`}
         >
-          <div className="flex items-center justify-between border-b border-border p-6">
+          <div className="flex items-center justify-between border-b border-border px-6 py-5">
 
             <Image
               src="/images/logo.png"
               alt="CampusServe"
-              width={200}
-              height={60}
-              className="h-10 w-auto object-contain"
+              width={220}
+              height={70}
+              className="h-11 w-auto object-contain"
             />
 
             <button

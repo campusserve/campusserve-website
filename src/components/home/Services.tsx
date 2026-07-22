@@ -15,10 +15,10 @@ export default function Services() {
       <Container className="relative">
 
         <SectionHeading
-          badge="Everything Students Need"
-          title="One App."
-          highlight="Every Campus Service."
-          description="Whether you're hungry, looking for accommodation, shopping, or sending a package, CampusServe connects you with trusted vendors around your campus."
+          badge="Campus Categories"
+          title="Everything You Need."
+          highlight="All in One Place."
+          description="From food and shopping to hostels, packages, local markets and student services, CampusServe brings everything around your campus together in one simple app."
         />
 
         <div className="mt-24 grid gap-8 md:grid-cols-2 xl:grid-cols-3">

@@ -3,45 +3,45 @@ import {
   Store,
   Bed,
   Package,
-  Wallet,
+  ShoppingBasket,
   GraduationCap,
 } from "lucide-react";
 
 export const services = [
   {
     icon: UtensilsCrossed,
-    title: "Food Delivery",
+    title: "Restaurants & Food",
     description:
-      "Order meals from trusted campus restaurants and food vendors with fast delivery.",
+      "Find meals, snacks and drinks from trusted campus restaurants and food vendors.",
   },
   {
     icon: Store,
-    title: "Campus Marketplace",
+    title: "Shops & Marketplace",
     description:
-      "Buy and sell products within your campus community safely and conveniently.",
+      "Buy fashion, gadgets, books, accessories and everyday student essentials.",
   },
   {
     icon: Bed,
-    title: "Hostel Finder",
+    title: "Hostel Space",
     description:
       "Discover verified hostels and accommodation close to your campus.",
   },
   {
     icon: Package,
-    title: "Package Delivery",
+    title: "Packages",
     description:
-      "Send and receive packages quickly using trusted student dispatch riders.",
+      "Send, receive and track packages safely with trusted campus dispatch riders.",
   },
   {
-    icon: Wallet,
-    title: "Campus Wallet",
+    icon: ShoppingBasket,
+    title: "Local Markets",
     description:
-      "Pay securely, receive refunds, and manage all your campus transactions in one place.",
+      "Shop groceries, fresh produce and daily essentials from nearby campus markets.",
   },
   {
     icon: GraduationCap,
-    title: "Campus Services",
+    title: "More Services",
     description:
-      "Access printing, laundry, tutoring, repairs, and other verified student services.",
+      "Access printing, tutoring, laundry, transportation, photography, repairs and more.",
   },
 ];

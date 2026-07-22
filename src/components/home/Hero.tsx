@@ -17,17 +17,17 @@ export default function Hero() {
       id="home"
       className="relative overflow-hidden bg-gradient-to-br from-background via-primary/5 to-background"
     >
-      <Container className="py-12 lg:py-20">
+      <Container className="py-10 sm:py-12 lg:py-20">
 
-        <div className="grid items-center gap-10 xl:grid-cols-[58%_42%]">
+        <div className="grid items-center gap-12 xl:grid-cols-[58%_42%]">
 
-          <div className="max-w-2xl">
+          <div className="max-w-3xl">
 
             <SectionBadge>
               {hero.badge}
             </SectionBadge>
 
-            <h1 className="mt-8 text-5xl font-black leading-[0.95] tracking-tight text-foreground lg:text-6xl xl:text-7xl">
+            <h1 className="mt-8 text-4xl font-black leading-[0.95] tracking-tight text-foreground sm:text-5xl lg:text-6xl xl:text-7xl">
               {hero.title}
 
               <span className="mt-3 block whitespace-pre-line text-primary">
@@ -35,11 +35,11 @@ export default function Hero() {
               </span>
             </h1>
 
-            <p className="mt-8 text-xl leading-9 text-muted-foreground">
+            <p className="mt-6 max-w-xl text-lg leading-8 text-muted-foreground sm:mt-8 sm:text-xl sm:leading-9">
               {hero.description}
             </p>
 
-            <div className="mt-10 flex flex-wrap gap-4">
+            <div className="mt-8 flex flex-wrap gap-4 sm:mt-10">
 
               <PrimaryButton>
                 {hero.primaryButton}
@@ -56,7 +56,7 @@ export default function Hero() {
 
             </div>
 
-            <div className="mt-10">
+            <div className="mt-8 sm:mt-10">
               <TrustBar />
             </div>
 
